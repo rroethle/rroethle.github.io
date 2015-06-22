@@ -24,7 +24,7 @@ try:
     index = index.format(styledEntries)
 
     #write all entries into index
-    index_file = open(os.path.join(path, 'index.html'), "w")
+    index_file = open(os.path.join(path, 'blog.html'), "w")
     index_file.write(index)
     index_file.close()
 

@@ -68,7 +68,7 @@
 		{
 		"date": "06/18/2015",
 		"title": "Week 3 Day 14",
-		"text":  "Game Day part 4. After yesterdays great progress we continued onward to finish with our initial build. We all set out on our tasks to finish getting our part of the project completed for our initial build. My specific part focused on integrating sound into the game. I learned that .mp3 files do not always play in pygame so I had to use audacity (a free sound converter) to either convert them to .ogg files or .wav files. Our instructor Andrew told me about soundcloud for downloading free music and I scoured that website as well as freesound.org and open game art.org.",
+		"text":  "Game Day part 4. After yesterdays great progress we continued onward to finish with our initial build. We all set out on our tasks to finish getting our part of the project completed for our initial build. My specific part focused on integrating sound into the game. I learned that .mp3 files do not always play in pygame so I had to use audacity (a free sound converter) to either convert them to .ogg files or .wav files. Our instructor Andrew told me about soundcloud for downloading free music and I scoured that website as well as freesound.org and open game art.org."
 		},
 		{
 		"date": "06/19/2015",
