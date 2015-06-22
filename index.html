@@ -6,26 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="favicon.ico">
 
-    <title>Blog</title>
+    <title>Ryan's Blog</title>
 
     <!-- CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.5/cerulean/bootstrap.min.css" rel="stylesheet">
     <link href="assets/css/bootstrap.css" rel="stylesheet">
     <link href="assets/css/bootswatch.css" rel="stylesheet">
+	<link href="styles/styles.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="assets/js/html5shiv.min.js"></script>
       <script src="assets/js/respond.min.js"></script>
     <![endif]-->
-
-    <style>
-    .sicon {
-    	height:40px;
-    	margin-top: 15px;
-    	vertical-align: bottom;
-    }
-	</style>
-	
   </head>
   
 <body>
@@ -40,7 +34,7 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand" href="#">Your Name</a>
+			<a class="navbar-brand name-title" href="#">Ryan Roethle</a>
 		</div>
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
 			<ul class="nav navbar-nav">
@@ -55,27 +49,34 @@
 
 	<div class="row">
 		<div class="col-md-8">
-			<h1>Hi! My name is Bob.</h1> 
-			<p>Here you can type out bunches of information about yourself. For example, you may include that you are attending <a href="http://www.devcodecamp.com/" target="_blank">devCodeCamp</a> with a link like this. Make sure that when you make links, you use target="_blank" if they are going to direct someone to another website.</p>
+			<h1>Hi!</h1> 
+			<p>Junior Developer with a strong desire to learn. Interested in Data Science and all things math! Give me an algorithm to work with and I'll be happy to work for hours.
+			I'll keep updating you on my progress as I continue my journey to becoming the best programmer I can be.</p>
 			<center>
 			<p><br /><strong><a href="blog.html" target="_blank">Follow my progress at devCodeCamp.</a></strong></p>
 			<p>
-		 		<a href="#" target="_blank"><img class="sicon" src="assets/img/in.png" alt="linkedin"></a>
+		 		<a href="https://www.linkedin.com/pub/ryan-roethle/47/939/642" target="_blank"><img class="sicon" src="assets/img/in.png" alt="linkedin"></a>
 		 		<a href="#" target="_blank"><img class="sicon" src="assets/img/fb.png" alt="facebook"></a>
 		 		<a href="#" target="_blank"><img class="sicon" src="assets/img/is.png" alt="instagram"></a>
 			</p>
+			<div id = "tedtalk">
+			<h4>
+			Learn more about algorithms from this fascinating Ted Talk
+			</h4>
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/ENWVRcMGDoU" frameborder="0" allowfullscreen></iframe>
+			</div>
 			</center>
 		</div>
-		<div class="col-md-4">
-			<h2>&nbsp;&nbsp;Contact me</h2>
+		<div class="col-md-4" id = "background">
+			<h2 id="contact">&nbsp;&nbsp;Contact me</h2>
 			<div class="list-group">
-				<a href="mailto:youremail@devCodeCamp.com" target="_top" class="list-group-item">
+				<a href="mailto:rroethle_he@dev.bse.edu" target="_top" class="list-group-item">
 					<h4 class="list-group-item-heading">At devCodeCamp:</h4>
-					<p class="list-group-item-text">youremail@devCodeCamp.com</p>
+					<p class="list-group-item-text">rroethle_he@dev.bse.edu</p>
 				</a>
-				<a href="mailto:youremail@something.com" target="_top" class="list-group-item">
+				<a href="mailto:rroethle@gmail.com" target="_top" class="list-group-item">
 					<h4 class="list-group-item-heading">Personal/Professional:</h4>
-					<p class="list-group-item-text">youremail@something.com</p>
+					<p class="list-group-item-text">rroethle@gmail.com</p>
 				</a>
 
 
@@ -92,16 +93,19 @@
 
 	<div class="row">
 		<div class="col-sm-4">
-			<h4>Interest 1</h4>
-			<p>Here you could time out tons of cools things about this interest. Or, maybe you could mentions some neat thing you have done before. It is not recommended to mention an upcoming event, as it is easy to forget about it after it happens, making your site lok outdated.</p>
+			<h4>Stocks</h4>
+			<p>This is where I discovered my love of programming!  Who knew analyzing stocks and options would lead me to a career path that I enjoy! You may see me at a coffee shop(another love of mine) pouring over charts but now with my ninja programming skills, I'm better prepared to take control of my financial future!</p>
+			<img id = "stocks" src = "assets/img/stocks2.jpg" alt = "Stock Market Up Arrow">
+		</div>
+		<div class="col-sm-4" id="running">
+			<h4>Running</h4>
+			<p>I love running! I have been running now for the past 5 years and have become more and more addicted as the time passes. I recently completed my second half-marathon in a time of 1 hour and 37 minutes and I can't wait to complete another. Look for me at the Brewers mini-marathon September 26th and at Al's Run October 9th</p>
+			<img id = "running" src = "assets/img/mini.jpg" alt = "Brewers mini-marathon 2015">
 		</div>
 		<div class="col-sm-4">
-			<h4>Interest 2</h4>
-			<p>Here you could time out tons of cools things about this interest. Or, maybe you could mentions some neat thing you have done before. It is not recommended to mention an upcoming event, as it is easy to forget about it after it happens, making your site lok outdated.</p>
-		</div>
-		<div class="col-sm-4">
-			<h4>Interest 3</h4>
-			<p>Here you could time out tons of cools things about this interest. Or, maybe you could mentions some neat thing you have done before. It is not recommended to mention an upcoming event, as it is easy to forget about it after it happens, making your site lok outdated.</p>
+			<h4>Baseball</h4>
+			<p>I enjoy most sports but baseball was my first love. Whether it's cheering on the Brewers or wheeling and dealing in my Fantasy Baseball League, I enjoy pretty much everything about baseball. I'm hoping my new found programming skills will lead me to a champtionship!</p>
+			<img id = "baseball" src = "assets/img/baseball.jpg" alt = "Brewers win game with Prince Fielder">
 		</div>
 	</div>
 
@@ -136,7 +140,7 @@
 	    <a href="https://www.behance.net/abhishekpipalva" target="_blank">Icons by Abhishek Pipalva</a>,
 	    <a href="http://www.jquery.com" target="_blank">jQuery</a>.
 	    <br/>
-	    Content &copy; 2015 <a href="http://www.devcodecamp.com/" target="_blank">devCodeCamp</a> &amp; --Your Name Here--
+	    Content &copy; 2015 <a href="http://www.devcodecamp.com/" target="_blank">devCodeCamp</a> &amp; Ryan Roethle
 	    </small>
 	    </p>
 	</footer>
@@ -145,7 +149,8 @@
 </div><!-- /.container -->
 
 <!--  JavaScript - Placed at the end of the document so the pages load faster -->
-<script src="assets/js/jquery.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<!--<script src="assets/js/jquery.js"></script>-->
 <script src="assets/js/bootstrap.min.js"></script>
 </body>
 </html>
