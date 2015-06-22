@@ -68,7 +68,13 @@
 		{
 		"date": "06/18/2015",
 		"title": "Week 3 Day 14",
-		"text":  " "
+		"text":  "Game Day part 4. After yesterdays great progress we continued onward to finish with our initial build. We all set out on our tasks to finish getting our part of the project completed for our initial build. My specific part focused on integrating sound into the game. I learned that .mp3 files do not always play in pygame so I had to use audacity (a free sound converter) to either convert them to .ogg files or .wav files. Our instructor Andrew told me about soundcloud for downloading free music and I scoured that website as well as freesound.org and open game art.org.",
+		},
+		{
+		"date": "06/19/2015",
+		"title": "Week 3 Day 15",
+		"text":  "Game Day part 5. Time for us to finish our game! We met this morning to determine our final tasks to finish the game. I noticed a bug with my sound for the missiles and thrust so that was my first task in fixing. Secondly, I wanted to add rules to our options page so users could know how to play. If I had time, I was going to try and add a two player game. Fixing the sound required me to add a stop function on the main game loop when the game ends. Adding the rules section proved a little difficult as I had to interact with our options page and then blit(a term used for printing text to the screen) the rules. Formatting this text is difficult as if each line is not the same amount of characters then I have to figure out the exact amount of x y spacing to line it up. This was a pain. After figuring this out, we finalized the power ups and our game works!  It is a pretty cool feeling seeing a finished product. We visited PKWare at lunch and got to see one of the most unique environments I have ever seen for a business. Really helpful to hear from some of the junior developers on their advice and how they got started. My biggest takeaway was how they are looking for passion and if you can show that, they are willing to take a chance on someone just getting into the field. This was a very helpful visit. The rest of the day we finished up with tinkering with our game some more and making sure we understand it. I learned alot with python and feel ready to take on JavaScript."
 		}
+		
 	]
 }
