@@ -1,7 +1,6 @@
-dcc-py-blogger
-==============================
+#dcc-html-template
 
-devCodeCamp Python Blogger - generates clean a clean HTML page of blog entires from JSON.
+devCodeCamp HTML template for github pages. A clean look for students that want a webpage linked to their GitHub repos.
 
 
 Bugs & Additions
@@ -9,7 +8,7 @@ Bugs & Additions
 
 Have a bug or want to add something? Please create an issue or a pull request right here.
 
-https://github.com/devCodeCamp/dcc-py-blogger
+https://github.com/devCodeCamp/dcc-html-template
 
 
 AUTHORS
@@ -17,7 +16,7 @@ AUTHORS
 
 **Nick Jaeger**
 
-**Dave**
+[see code for other attributions]
 
 
 Copyright and License
