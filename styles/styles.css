@@ -49,3 +49,7 @@ div .navbar-header >.name-title{
 #tedtalk {
 margin: 25px;
 }
+
+.navbar {
+background-color: blue;
+}
