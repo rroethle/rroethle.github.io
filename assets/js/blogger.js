@@ -173,7 +173,6 @@ function getblog2(blogs,word){
 	var totalNumber = pageDiv
 	totalNumber = Math.ceil(Number(totalNumber)/5)
 	var blogNum = 5
-	console.log("final" + finalBlog.length)
 	var pageLast = blogLength % blogNum
 	var numPages = Math.ceil(blogLength/blogNum)
 		if (num >= numPages){
