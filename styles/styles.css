@@ -53,3 +53,12 @@ margin: 25px;
 .navbar {
 background-color: blue;
 }
+
+.highlight {
+    background-color: #FFFF88;
+}
+
+#search-count {
+text-align: center;
+float: right;
+}

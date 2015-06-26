@@ -9,7 +9,7 @@
     <title>Ryan's Blog</title>
 
     <!-- CSS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">-->
 	<!--<link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.5/cerulean/bootstrap.min.css" rel="stylesheet">-->
     <link href="assets/css/bootstrap.css" rel="stylesheet">
     <link href="assets/css/bootswatch.css" rel="stylesheet">
@@ -42,11 +42,11 @@
 			<ul class="nav navbar-nav navbar-right">
 				<li><a href="http://www.devcodecamp.com" target="_blank"><span class="glyphicon glyphicon-share-alt" aria-hidden="true"></span> <img src="assets/img/devcodecamp.png" alt="devcodecamp"></a></li>	
 				<li><input type="text" id="search-second" class="form-control" placeholder="Search Blog" style="float:right; margin-top:18px;"></li>
-
 			</ul>
+			  
 		</div>
 	</nav>
-
+	<div id = "search-count"></div>
 	<div class="row">
 		<div class="col-md-8">
 			<h1>Hi!</h1> 
@@ -127,7 +127,8 @@
     <h2>Blog</h2> 
     </div> 
   <div class="col-md-4"> 
-    <span style="height:50px;"> </span> 
+    <span style="height:50px;"> </span>
+	 <input type='text' class='search form-control' id='search2' name="search2" placeholder="Search Blog" style="float:right;" /> 
   </div> 
 </div> 
 
@@ -138,7 +139,11 @@
 <div id="blog" class="row"> 
   <!-- blog posts are generated here --> 
 </div> 
-
+<div id="page-selection"></div>
+<div id="blog2" class="row"> 
+  <!-- blog posts are generated here --> 
+</div> 
+<div id="page-selection2"></div>
    <div class="row">
 	<hr/>
 	<footer class="text-center">
@@ -154,8 +159,7 @@
 	    Content &copy; 2015 <a href="http://www.devcodecamp.com/" target="_blank">devCodeCamp</a> &amp; Ryan Roethle
 	    </small>
 	    </p>
-	</footer>
-    </div>		
+	</footer>	
 
 </div><!-- /.container -->
 
@@ -164,6 +168,9 @@
 
 <script src="assets/js/jquery.js"></script>
 <script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/jquery.highlight.js"></script>
+<script type="text/javascript" src="assets/js/jquery.bootpag.min.js"></script>
 <script src="assets/js/blogger.js"></script>
+
 </body>
 </html>
