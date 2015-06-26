@@ -93,10 +93,15 @@ $("#search-second").keyup(function(e){
 		performSearch()
 	})
 
+function stripWhiteSpace(value){
+	noSpaceValue = value.split(" ").join("")
+	return noSpaceValue
+}
 	
 function performSearch(){
 	$("body").unhighlight();
 		var searchValue = $("#search-second").val()
+		searchValue = stripWhiteSpace(searchValue)
 		var count = 0
 		
 		if (searchValue.length > 0){
