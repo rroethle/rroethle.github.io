@@ -1,4 +1,3 @@
-
 .sicon {
     	height:40px;
     	margin-top: 15px;
@@ -22,7 +21,9 @@ div .navbar-header >.name-title {
 	background-image: url("../assets/img/background2.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
-	margin: auto auto
+	margin: auto auto;
+	max-width: 500px;
+	min-width: 300px;
 }
 
 #contact {
@@ -30,7 +31,8 @@ div .navbar-header >.name-title {
 }
 
 div .navbar-header >.name-title{
- font:normal 48pt Arial;
+ font:normal 38pt Arial;
+ margin-bottom: 5px;
  color:#FFFFFF;
  text-shadow: 0 1px 0 #ccc,
  0 2px 0 #c9c9c9,
