@@ -187,7 +187,7 @@
 		},
 		{
 		"date": "07/23/2015",
-		"title": "Week 7 Day 37",
+		"title": "Week 7 Day 38",
 		"text": "Present Design Patter Project and more Time Complexity: We went over the time complexity assignment given to us yesterday where we had to evaluate different time complexities for various data types(i.e. insert or removal for a sorted list) and then we presented our design pattern project for the mobile news server and were given constructive feedback on our project. I was off on my observer pattern as I didn't use the built in C# commands which was okay but I did not create my event handlers in the correct observer form. We were then given a lecture on concurrency topics and locks in general and specifically in c#. We learned about threading and using the Task.Run function as well as using async calls to run multiple c# asynchronously. Again, very interesting. We learned more about locks and how to avoid race conditions and deadlock conditions and then were given another project about TCPListners which my brain is too fried to work on right now so I will discuss that tomorrow."
 		},
 		{
