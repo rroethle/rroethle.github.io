@@ -1,66 +1,60 @@
-.sicon {
-    	height:40px;
-    	margin-top: 15px;
-    	vertical-align: bottom;
-    }
-	
-#running, #baseball {
-	display: block;
-	margin: auto;
+h1, h2,ul {
+	clear: both;
 }
 
-#stocks {
-   width: 100%;
+ul.pagination1 li:hover,
+ul.pagination2 li:hover,
+ul.pagination3 li:hover {
+	background-color: #FF9500;
 }
 
-div .navbar-header >.name-title {
-    color: white;
+ul.pagination1 li,
+ul.pagination2 li,
+ul.pagination3 li {
+    padding: 10px;
+    font-family: georgia;
+	background-color: #8890FC;
+    font-size: 24px;
+    color: #fff;
+    line-height: 1;
+    width: 600px;
+    margin-bottom: 1px;
+	list-style:none;
 }
 
-#background {
-	background-image: url("../assets/img/background2.jpg");
-	background-repeat: no-repeat;
-	background-size: cover;
-	margin: auto auto;
-	max-width: 500px;
-	min-width: 300px;
+ul.red {
+	outline:10px solid red;
 }
 
-#contact {
-	text-align: right;
+ul.simplePagerNav li{
+    display:block;
+    float: left;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-family: georgia;
+	font-size:14px;
 }
 
-div .navbar-header >.name-title{
- font:normal 38pt Arial;
- margin-bottom: 5px;
- color:#FFFFFF;
- text-shadow: 0 1px 0 #ccc,
- 0 2px 0 #c9c9c9,
- 0 3px 0 #bbb,
- 0 4px 0 #b9b9b9,
- 0 5px 0 #aaa,
- 0 6px 1px rgba(0,0,0,.1),
- 0 0 5px rgba(0,0,0,.1),
- 0 1px 3px rgba(0,0,0,.3),
- 0 3px 5px rgba(0,0,0,.2),
- 0 5px 10px rgba(0,0,0,.25),
- 0 10px 10px rgba(0,0,0,.2),
- 0 20px 20px rgba(0,0,0,.15);
+ul.simplePagerNav li a{
+    color: #333;
+    text-decoration: none;
 }
 
-#tedtalk {
-margin: 25px;
+li.currentPage {
+	background: red;
+    background: #FF9500;	
 }
 
-.navbar {
-background-color: blue;
+ul.simplePagerNav li.currentPage a {
+	color: #fff;	
 }
 
-.highlight {
-    background-color: #FFFF88;
-}
+table.pageme {
+    border-collapse: collapse;
+    border: 1px solid #ccc;
+}  
 
-#search-count {
-text-align: center;
-float: right;
+table.pageme td {
+    border-collapse: collapse;
+    border: 1px solid #ccc;
 }

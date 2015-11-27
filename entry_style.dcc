@@ -1,6 +1,0 @@
-	<div class="col-sm-12">
-		<small><p class="muted" style="float:right;">{0}</p></small>
-		<h5>{1}</h5>
-		<p>{2}</p>
-		<hr/>
-	</div>

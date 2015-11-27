@@ -1,171 +1,231 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="favicon.ico">
+<!doctype html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Project 5 - Neighborhood Map</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+		<style>
+			@import url(http://fonts.googleapis.com/css?family=Bitter:400,700);
+      		html, body {
+        		height: 100%;
+        		margin: 0%;
+        		padding: 0;
+      		}
+      		.navbar{
+      		border-radius: 0px;
+      		}
+      		input{
+      		margin: 5px;
+      		}
+		      #map {
+		      	min-width: 200px;
+		      	min-height: 250px;
+		      }
 
-    <title>Ryan's Blog</title>
+     #map_wrapper {
+    height: 400px;
+}
 
-    <!-- CSS -->
-	<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">-->
-	<!--<link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.5/cerulean/bootstrap.min.css" rel="stylesheet">-->
-    <link href="assets/css/bootstrap.css" rel="stylesheet">
-    <link href="assets/css/bootswatch.css" rel="stylesheet">
-	<link href="styles/styles.css" rel="stylesheet">
+	#map_canvas {
+    	width: 100%;
+    	height: 100%;
+	}
 
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="assets/js/html5shiv.min.js"></script>
-      <script src="assets/js/respond.min.js"></script>
-    <![endif]-->
-  </head>
-  
+      h1 {
+	margin: 0px;
+	text-align: center;
+	text-shadow: -1px -1px 0px rgba(255,255,255,0.3), 1px 1px 0px rgba(0,0,0,0.8);
+	color: #333;
+	opacity: 0.4;
+	font: 700 80px 'Bitter';
+	border-style: solid;
+    border-width: 5px;
+}
+
+body { 
+   overflow-x: hidden;
+}
+
+      footer {
+      	color: #fff;
+  		/*position: absolute;*/
+  		bottom: 0;
+  		width: 100%;
+  		/* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: #333;
+}
+
+.small_text {
+		font-size: 12px;
+
+}
+
+
+ul.simplePagerNav li{
+    display:block;
+    float: left;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-family: georgia;
+	font-size:14px;
+}
+
+ul.simplePagerNav li a{
+    color: #333;
+    text-decoration: none;
+}
+
+li.currentPage {
+	background: red;
+    background: #FF9500;	
+}
+
+ul.simplePagerNav li.currentPage a {
+	color: #fff;	
+}
+
+
+
+@media screen and (max-width: 600px) {
+     h1 {
+	text-shadow: -1px -1px 0px rgba(255,255,255,0.3), 1px 1px 0px rgba(0,0,0,0.8);
+	color: #333;
+	opacity: 0.4;
+	font: 700 24px 'Bitter';
+	border-style: solid;
+    border-width: 1px;
+}
+	#map_wrapper {
+    height: 200px;
+}
+
+}
+
+@media screen and (max-width: 1024px) and (min-width: 600px){
+      h1 {
+	text-shadow: -1px -1px 0px rgba(255,255,255,0.3), 1px 1px 0px rgba(0,0,0,0.8);
+	color: #333;
+	opacity: 0.4;
+	font: 700 48px 'Bitter';
+	border-style: solid;
+    border-width: 1px;
+}
+ #map {
+		      	min-width: 100px;
+		      }
+
+     #map_wrapper {
+    height: 200px;
+}
+
+	#map_canvas {
+    	width: 100%;
+    	height: 100%;
+	}
+}
+</style>
+
+</head>
 <body>
+<nav class="navbar navbar-inverse">
+	<div class="container-fluid">
+	    <!-- Brand and toggle get grouped for better mobile display -->
+	    <div class="navbar-header">
+	      	<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+	        <span class="sr-only">Toggle navigation</span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	      	</button>
+	      	<a class="navbar-brand" href="https://www.udacity.com/wiki/nd001" target = "_blank">Project 5 - Udacity <i class="fa fa-home"></i></a>
+	      	<br>
+	    </div>
+    	<!-- Collect the nav links, forms, and other content for toggling -->
+	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	      	<ul class="nav navbar-nav">
+	        	<li><a href="http://yelp.com" target="_blank">Yelp <i class="fa fa-yelp"></i></a></li>
+	        	<li><a href="https://foursquare.com/" target="_blank">FourSquare  <i class="fa fa-foursquare"></i></a></li>
+	      	</ul>
+	    </div><!-- /.navbar-collapse -->
+  	</div><!-- /.container-fluid -->
+</nav>
+
+<header id="header" class="text-center">
+	<div class="row">
+		<h1>Neighborhood Map</h1>
+	</div>
+</header>
 <div class="container">
-
-	<nav class="navbar navbar-inverse">
-		<div class="container-fluid">
-			<div class="navbar-header">
-			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
-				<span class="sr-only">Toggle navigation</span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-			</button>
-			<a class="navbar-brand name-title" href="#">Ryan Roethle</a>
-		</div>
-		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
-			<ul class="nav navbar-nav">
-			</ul>
-			<ul class="nav navbar-nav navbar-right">
-				<li><a href="http://www.devcodecamp.com" target="_blank"><span class="glyphicon glyphicon-share-alt" aria-hidden="true"></span> <img src="assets/img/devcodecamp.png" alt="devcodecamp"></a></li>	
-				<li><input type="text" id="search-top" class="form-control" placeholder="Search Blog" style="float:right; margin-top:18px;"></li>
-			</ul>
-			  
-		</div>
-	</nav>
-	<div id = "search-count"></div>
-	<div class="row">
-		<div class="col-md-8">
-			<h1>Hi!</h1> 
-			<p>Junior Developer with a strong desire to learn. Interested in Data Science and all things math! Give me an algorithm to work with and I'll be happy for hours.
-			As a former mechanical engineer, I want to improve upon my problem solving skills and challenge myself to get better. I'll keep updating you on my progress as I continue my journey to becoming the best programmer I can be.</p>
-			<center>
-			<p>
-		 		<a href="https://www.linkedin.com/pub/ryan-roethle/47/939/642" target="_blank"><img class="sicon" src="assets/img/in.png" alt="linkedin"></a>
-		 		<a href="#" target="_blank"><img class="sicon" src="assets/img/fb.png" alt="facebook"></a>
-		 		<a href="#" target="_blank"><img class="sicon" src="assets/img/is.png" alt="instagram"></a>
-			</p>
-			<div id = "tedtalk">
-			<h4>
-			Learn more about algorithms from this fascinating Ted Talk
-			</h4>
-			<iframe width="560" height="315" src="https://www.youtube.com/embed/ENWVRcMGDoU" frameborder="0" allowfullscreen></iframe>
+	<div class = "row">
+			<div class="row">
+				<div class = "col-sm-6 col-md-4">
+					<section id="searchHeader">
+						<div id="termSearchHeader">
+							<p>Search Term (Results: <span data-bind="text: searchResults"></span>)
+							<input class="form-control" data-bind='textInput: searchLocation, event: {keyup: getResults}'/></p>
+						</div>
+						<div class="radio">
+  							<label><input type="radio" name="reviewsite" checked="checked" data-bind="checked: reviewSiteResults, event: {change: getResults}" value="Foursquare">Foursquare</label>
+						</div>
+						<div class="radio">
+  							<label><input type="radio" name="reviewsite" data-bind="checked: reviewSiteResults, event: {change: getResults}" value="Yelp">Yelp</label>
+						</div>
+					</section>
+				</div>
+				<div class="col-sm-6 col-md-8">
+					<section id="mapArea">
+						<div class="col-md-push-3" id="neighborhoodSearchHeader">
+							<form data-bind="submit: createMap">
+								<p>Select Neighborhood:  (Current: <span data-bind="text: formattedAddress"></span>)</p>
+								<span class="col-sm-6 col-md-6">
+									Search Radius (miles):<input type = "number" class="input-sm" data-bind='value: searchRadius, attr: {max: 25, min: 1, step: 1}'/>
+								</span>
+								<span class="col-sm-4 col-md-4">
+									<button class="btn btn-default" type="submit">Search</button>
+									<button class="btn btn-default" data-bind='event: {click: getResults}'>Back</button>
+								</span>
+								<input class="form-control" data-bind="value: neighborhood" placeholder="Milwaukee,WI" autofocus/>
+							</form>
+						</div>
+					</section>
+				</div>	
+		</div>		
+		<div class ="row">
+			<div class="col-sm-6 col-sm-push-6 col-md-8 col-md-push-4">
+				<div id="map"></div>
 			</div>
-			</center>
-		</div>
-		<div class="col-md-4" id = "background">
-			<h2 id="contact">&nbsp;&nbsp;Contact me</h2>
-			<div class="list-group">
-				<a href="mailto:rroethle_he@dev.bse.edu" target="_top" class="list-group-item">
-					<h4 class="list-group-item-heading">At devCodeCamp:</h4>
-					<p class="list-group-item-text">rroethle_he@dev.bse.edu</p>
-				</a>
-				<a href="mailto:rroethle@gmail.com" target="_top" class="list-group-item">
-					<h4 class="list-group-item-heading">Personal/Professional:</h4>
-					<p class="list-group-item-text">rroethle@gmail.com</p>
-				</a>
-
-
+			<div class = "col-sm-6 col-sm-pull-6 col-md-4 col-md-pull-8">
+				<div id="results">
+					<ul class="pagination3" data-bind="foreach: foundLocations">
+            			<div data-bind="if: rating, click:$parent.clickMarker.bind($data)"><b><li data-bind="text: combined"></li></b>
+            				<span class = "small_text" data-bind="text: description" ></span><br/>
+            			</div>
+            			<div data-bind="if: people, click:$parent.clickMarker"><b><li data-bind="text: name"></li></b>
+            				Current People: <span class = "small_text" data-bind="text: people" ></span><br/>
+            				Total Checkins: <span class = "small_text" data-bind="text: checkins" ></span><br/>
+            			</div>	
+            			<a class = "small_text" data-bind="attr: { href: url}" target="_blank"><span data-bind="text: url"></span></a>
+    				</ul>
+				</div>
 			</div>
 		</div>
 	</div>
-	  
-	<div class="row">
-		<div class="col-md-12">
-			<h2>Interests</h2>
-			<hr/>
-		</div>
+	<br>
+</div>
+<footer id="footer-bottom">
+	<div class="container">
+		<p>Created by Ryan Roethle</p>
 	</div>
-
-	<div class="row">
-		<div class="col-sm-4">
-			<h4>Stocks</h4>
-			<p>This is where I discovered my love of programming!  Who knew analyzing stocks and options would lead me to a career path that I enjoy! You may see me at a coffee shop(another love of mine) pouring over charts but now with my ninja programming skills, I'm better prepared to take control of my financial future!</p>
-			<img id = "stocks" src = "assets/img/stocks2.jpg" alt = "Stock Market Up Arrow">
-		</div>
-		<div class="col-sm-4" id="running">
-			<h4>Running</h4>
-			<p>I love running! I have been running now for the past 5 years and have become more and more addicted as the time passes. I recently completed my second half-marathon in a time of 1 hour and 37 minutes and I can't wait to complete another. Look for me at the Brewers mini-marathon September 26th and at Al's Run October 9th</p>
-			<img id = "running" src = "assets/img/mini.jpg" alt = "Brewers mini-marathon 2015">
-		</div>
-		<div class="col-sm-4">
-			<h4>Baseball</h4>
-			<p>I enjoy most sports but baseball was my first love. Whether it's cheering on the Brewers or wheeling and dealing in my Fantasy Baseball League, I enjoy pretty much everything about baseball. I'm hoping my new found programming skills will lead me to a champtionship!</p>
-			<img id = "baseball" src = "assets/img/baseball.jpg" alt = "Brewers win game with Prince Fielder">
-		</div>
-	</div>
-
-<!--    Blog     -->
-	<div id="blogheader" class="row">
-    	<!--    Your blog header and search bar will eventually go here. Ignore this comment for now. -->
-	</div>
-	<div id="blogcontent" class="row">
-    	<!--    Your blog entries and pagination will eventually go here. Ignore this comment for now. -->
-	</div>
-	
-<!--    /.Blog     -->
-<div class="row"> 
-  <div class="col-md-8"> 
-    <h2>Blog</h2> 
-    </div> 
-  <div class="col-md-4"> 
-    <span style="height:50px;"> </span>
-	 <input type='text' class='search form-control' id='search-bottom' name="search-bottom" placeholder="Search Blog" style="float:right;" /> 
-  </div> 
-</div> 
-
-<div class="row"> 
-  <hr/> 
-</div> 
-
-<div id="blog" class="row"> 
-  <!-- blog posts are generated here --> 
-</div> 
-<div id="page-selection"></div>
-<div id="blog2" class="row"> 
-  <!-- blog posts are generated here --> 
-</div> 
-<div id="page-selection2"></div>
-   <div class="row">
-	<hr/>
-	<footer class="text-center">
-	    <p class="text-muted">
-	    <small>
-	    Built using
-	    <a href="http://twitter.github.com/bootstrap/" target="_blank">Bootstrap</a>,
-	    <a href="http://www.bootswatch.com" target="_blank">Readable by Bootswatch</a>,
-	    <a href="http://glyphicons.com" target="_blank">Glyphicons</a>,
-	    <a href="https://www.behance.net/abhishekpipalva" target="_blank">Icons by Abhishek Pipalva</a>,
-	    <a href="http://www.jquery.com" target="_blank">jQuery</a>.
-	    <br/>
-	    Content &copy; 2015 <a href="http://www.devcodecamp.com/" target="_blank">devCodeCamp</a> &amp; Ryan Roethle
-	    </small>
-	    </p>
-	</footer>	
-
-</div><!-- /.container -->
-
-<!--  JavaScript - Placed at the end of the document so the pages load faster -->
-
-
-<script src="assets/js/jquery.js"></script>
-<script src="assets/js/bootstrap.min.js"></script>
-<script src="assets/js/jquery.highlight.js"></script>
-<script type="text/javascript" src="assets/js/jquery.bootpag.min.js"></script>
-<script src="assets/js/blogger.js"></script>
-
-</body>
+</footer>
+<script src="scripts/jquery-2.1.4.min.js"> </script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="scripts/knockout-3.3.0.js"></script>
+<script src="scripts/sha1.js"> </script>
+<script src="scripts/oauth.js"> </script>
+<script src="scripts/jquery.quick.pagination.min.js" async></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD5KM6gI6jVqcykSSFSHrIJe1W9nVeMqic&libraries=places&callback=NeighborhoodViewModel.createMap" async defer></script>	
+<script src="scripts/neighborhood.js"> </script>
+</body>	
 </html>
