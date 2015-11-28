@@ -359,26 +359,3 @@ ko.applyBindings(NeighborhoodViewModel)
 
 // sets initial map load of Milwaukee, WI
 NeighborhoodViewModel.neighborhood("Milwaukee,WI")
-
-//listens for resizing of the window and adjusts map bounds
-  // window.addEventListener('resize', function(e) 
-  // {
-  //   var map = new google.maps.Map(document.querySelector('#map'));
-  // // Make sure the map bounds get updated on page resize
-  //   console.log("It did it")
-	 //   map.fitBounds(mapBounds);
-  // });
-
-function getSome(markerArray){
-    // x functionality when window loadss
-for (i=0; i<markerArray.length; i++){
-                  var id = "test0"
-                  google.maps.event.addDomListener(document.getElementById(id), 'click', function() {
-  console.log(markerArray);});
-                }
-}
-
-  document.addEventListener("DOMContentLoaded", function(event) {
-    console.log("cool")
-    getSome(NeighborhoodViewModel.markerArray())
-  });

@@ -1,15 +1,13 @@
 //Complete by November 15th*/
 
-Async Requests for API
+
 Yelp
 Zoom
-
-
-
-Slow Load
+Same Name, all markers bounce
+Slow Load (Async Requests for API)
 Look/Style/Responsiveness
+Error Handling
 CodeCleanup
-
 
 
 
